@@ -6,7 +6,7 @@ class SecondSignIn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 60, left: 28, right: 28),
+        padding: const EdgeInsets.only(top: 80, left: 28, right: 28),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +83,7 @@ class SecondSignIn extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 50,
               ),
               Container(
                 width: 320,
