@@ -124,10 +124,52 @@ class SecondPricing extends StatelessWidget {
       );
     }
 
+    Widget navButton() {
+      return Container(
+        width: double.infinity,
+        height: 55,
+        child: TextButton(
+          onPressed: () {},
+          style: TextButton.styleFrom(
+              backgroundColor: Color(0xffE57C73),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              )),
+          child: Text(
+            'Subscribe Now',
+            style: GoogleFonts.poppins(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+      );
+    }
+
+    Widget contactText() {
+      return Text(
+        'Contact Support',
+        style: GoogleFonts.poppins(
+          color: Colors.white,
+          fontSize: 16,
+          decoration: TextDecoration.underline,
+        ),
+      );
+    }
+
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset('assets/bg_pricing.png'),
+          Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/bg_pricing.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 80, left: 32, right: 32),
             child: Column(
@@ -137,6 +179,14 @@ class SecondPricing extends StatelessWidget {
                   height: 50,
                 ),
                 options(),
+                SizedBox(
+                  height: 50,
+                ),
+                navButton(),
+                SizedBox(
+                  height: 20,
+                ),
+                contactText(),
               ],
             ),
           ),
